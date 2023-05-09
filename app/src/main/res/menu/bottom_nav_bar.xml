@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/notify"
+        android:icon="@drawable/ic_bell"
+        android:title="@string/notify" />
+    <item
+        android:id="@+id/project"
+        android:icon="@drawable/ic_home"
+        android:title="@string/project" />
+    <item
+        android:id="@+id/fab"
+        android:enabled="false"
+        android:title=""/>
+    <item
+        android:id="@+id/task"
+        android:icon="@drawable/ic_calender"
+        android:title="@string/task" />
+    <item
+        android:id="@+id/todolist"
+        android:icon="@drawable/ic_check"
+        android:title="@string/todolist" />
+</menu>
