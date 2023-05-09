@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Task_Management</string>
+    <string name="project">Project</string>
+    <string name="task">Task</string>
+    <string name="notify">Notify</string>
+    <string name="todolist">Todo list</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add">Add</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="signup_hint">Don\'t have an account?</string>
+    <string name="signin_hint">Already have an account?</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="project_name">Project Name</string>
+    <string name="description">Description</string>
+    <string name="create">Create</string>
+    <string name="new_project">New Project</string>
+    <string name="date_planted">Date Planted</string>
+    <string name="date_start">Date Start:</string>
+    <string name="date_end">Date End:</string>
+</resources>

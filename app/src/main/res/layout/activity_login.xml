@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context=".LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/primary_col" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:background="@drawable/custom_edittext"
+                android:layout_marginTop="40dp"
+                android:padding="8dp"
+                android:hint="@string/email"
+                android:drawableStart="@drawable/baseline_person_24"
+                android:drawablePadding="8dp"
+                android:textColor="@color/text_col"
+                android:id="@+id/sigin_email"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:background="@drawable/custom_edittext"
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
+                android:hint="@string/password"
+                android:drawableStart="@drawable/outline_lock_24"
+                android:drawablePadding="8dp"
+                android:textColor="@color/text_col"
+                android:id="@+id/signin_pass"
+                android:inputType="textPassword"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:layout_marginTop="20dp"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textColor="@color/text_col"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:layout_marginTop="30dp"
+                android:padding="8dp"
+                android:text="@string/sign_in"
+                android:id="@+id/signin_btn"
+                android:background="@drawable/rounded_btn"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="10dp" >
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/orText"
+                    android:background="#c0c0c0" />
+
+                <TextView
+                    android:id="@+id/orText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Or sign in with"
+                    android:textColor="@android:color/black"
+                    android:padding="8dp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/orText"
+                    android:background="#c0c0c0" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+
+                <Button
+                    android:id="@+id/social_1"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/baseline_cloud_off_24"
+                    android:contentDescription="1" />
+                <Button
+                    android:id="@+id/social_2"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/baseline_cloud_off_24"
+                    android:contentDescription="2" />
+
+                <Button
+                    android:id="@+id/social_3"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/baseline_cloud_off_24"
+                    android:contentDescription="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:height="20dp"
+                    android:text="@string/signup_hint"
+                    android:textColor="@color/text_col"
+                    android:textSize="12sp"
+                    android:paddingRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/goto_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:height="20dp"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/secondary_col"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
