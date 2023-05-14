@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_vertical"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -43,6 +43,7 @@
                 android:drawablePadding="8dp"
                 android:textColor="@color/text_col"
                 android:id="@+id/sigin_email"
+                android:inputType="text"
                 />
 
             <EditText
@@ -68,7 +69,7 @@
                 android:textSize="12sp"
                 android:textColor="@color/text_col"/>
 
-            <Button
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:height="50dp"
@@ -76,7 +77,10 @@
                 android:padding="8dp"
                 android:text="@string/sign_in"
                 android:id="@+id/signin_btn"
+                android:backgroundTint="@color/primary_col"
                 android:background="@drawable/rounded_btn"
+                app:spinning_bar_color="@color/white"
+                android:layout_gravity="center"
                 />
 
             <RelativeLayout

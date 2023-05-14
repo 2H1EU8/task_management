@@ -7,7 +7,7 @@
 *           -insert date to FireBase RealTime Data Base
 * */
 
-package com.app.task_management
+package com.app.task_management.activities
 
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -16,11 +16,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.app.task_management.R
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.timepicker.MaterialTimePicker
 import java.util.*
 
 class AddProjectActivity : AppCompatActivity() {
+
+//    private lateinit var databaseReference:
 
     private lateinit var backBtn: TextView
     private lateinit var createBtn: Button
@@ -81,6 +83,7 @@ class AddProjectActivity : AppCompatActivity() {
                     if(eD.before(sD)) {
                         Toast.makeText(this,"End date must before start date, please change date planted", Toast.LENGTH_LONG).show()
                         eD.set(0,0,0)
+                        return@OnDateSetListener;
                     }else endDate.text = "$dayOfMonth/${monthOfYear + 1}\n$year"
                 }, mYear, mMonth, mDay)
             dateEndPickerDialog.show()
@@ -112,6 +115,12 @@ class AddProjectActivity : AppCompatActivity() {
                 projectDescription.error = "Project description cannot be empty"
                 return@setOnClickListener
             }
+            //validate day
+            if(eD.before(sD)) {
+                Toast.makeText(this,"End date must before start date, please change date planted", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
 
         }
     }
