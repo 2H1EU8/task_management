@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_vertical"
-    tools:context=".RegisterActivity">
+    tools:context=".activities.RegisterActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -22,6 +22,7 @@
             android:layout_gravity="center_horizontal"
             android:padding="24dp">
 
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -30,19 +31,54 @@
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:textColor="@color/primary_col" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="35dp">
+                <EditText
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:height="50dp"
+                    android:background="@drawable/custom_edittext"
+                    android:padding="8dp"
+                    android:hint="@string/first_name"
+                    android:drawableStart="@drawable/baseline_person_24"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/text_col"
+                    android:inputType="text"
+                    android:id="@+id/fname"/>
+                <EditText
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:height="50dp"
+                    android:background="@drawable/custom_edittext"
+                    android:layout_marginStart="20dp"
+                    android:padding="8dp"
+                    android:hint="@string/last_name"
+                    android:drawableStart="@drawable/baseline_person_24"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/text_col"
+                    android:id="@+id/lname"
+                    android:inputType="text"
+                    />
+            </LinearLayout>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:height="50dp"
                 android:background="@drawable/custom_edittext"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:padding="8dp"
                 android:hint="@string/email"
                 android:drawableStart="@drawable/baseline_person_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/text_col"
+                android:inputType="text"
                 android:id="@+id/sigup_email"/>
+
+
 
             <EditText
                 android:layout_width="match_parent"
@@ -73,15 +109,18 @@
                 android:id="@+id/signup_repass"
                 android:inputType="textPassword"/>
 
-            <Button
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/signin_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:height="50dp"
                 android:layout_marginTop="30dp"
+                android:height="50dp"
+                android:background="@drawable/rounded_btn"
+                android:backgroundTint="#6844DB"
                 android:padding="8dp"
                 android:text="@string/sign_up"
-                android:id="@+id/signin_btn"
-                android:background="@drawable/rounded_btn"
+                android:layout_gravity="center"
+                app:spinning_bar_color="@color/white"
                 />
 
             <RelativeLayout
@@ -162,7 +201,7 @@
                     android:text="@string/signin_hint"
                     android:textColor="@color/text_col"
                     android:textSize="12sp"
-                    android:paddingRight="5dp"/>
+                    android:paddingEnd="5dp"/>
 
                 <TextView
                     android:id="@+id/goto_signin"
