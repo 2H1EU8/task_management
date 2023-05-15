@@ -165,24 +165,24 @@
 
                 <Button
                     android:id="@+id/social_1"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_marginEnd="20dp"
-                    android:background="@drawable/baseline_cloud_off_24"
+                    android:background="@drawable/facebook_f"
                     android:contentDescription="1" />
                 <Button
                     android:id="@+id/social_2"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_marginEnd="20dp"
-                    android:background="@drawable/baseline_cloud_off_24"
+                    android:background="@drawable/instagram"
                     android:contentDescription="2" />
 
                 <Button
                     android:id="@+id/social_3"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/baseline_cloud_off_24"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/envelope_regular"
                     android:contentDescription="3" />
             </LinearLayout>
 
