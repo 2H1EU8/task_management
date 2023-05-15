@@ -27,10 +27,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sign_up"
-                android:textSize="24sp"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textColor="@color/primary_col" />
+                android:textColor="@color/g_dark_blue"
+                android:textSize="24sp"
+                android:textStyle="bold" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -113,15 +113,18 @@
                 android:id="@+id/signin_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:height="50dp"
                 android:background="@drawable/rounded_btn"
-                android:backgroundTint="#6844DB"
+                android:backgroundTint="@color/g_dark_blue"
+                android:capitalize="characters"
+                android:fontFamily="@font/montserrat_regular"
                 android:padding="8dp"
                 android:text="@string/sign_up"
-                android:layout_gravity="center"
-                app:spinning_bar_color="@color/white"
-                />
+                android:textColor="@color/g_line"
+                android:textSize="14sp"
+                app:spinning_bar_color="@color/white" />
 
             <RelativeLayout
                 android:layout_width="match_parent"

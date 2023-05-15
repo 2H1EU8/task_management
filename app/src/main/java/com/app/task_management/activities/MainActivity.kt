@@ -32,36 +32,5 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bottomNavigationView.background = null
-
-        val taskFragment = TaskFragment()
-        val notifyFragment = NotifyFragment()
-        val projectFragment = ProjectFragment()
-        val todoFragment = TodoFragment()
-
-
-        binding.bottomNavigationView.setOnItemSelectedListener {
-            when(it.itemId) {
-                R.id.task -> replaceFragment(taskFragment)
-                R.id.notify -> replaceFragment(notifyFragment)
-                R.id.todolist -> replaceFragment(projectFragment)
-                R.id.project -> replaceFragment(todoFragment)
-            }
-            true
-        }
-
-        addBtn = findViewById(R.id.addProject)
-        addBtn.setOnClickListener {
-            startActivity(Intent(this, AddProjectActivity::class.java))
-        }
-
-    }
-
-    private fun replaceFragment(fragment: Fragment) {
-        val fragmentManager : FragmentManager = supportFragmentManager
-        val fragmentTransaction : FragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment);
-        fragmentTransaction.commit()
-
     }
 }

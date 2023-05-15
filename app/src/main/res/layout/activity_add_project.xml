@@ -17,13 +17,15 @@
             android:drawableRight="@drawable/baseline_arrow_back_24"
             android:id="@+id/backBtn"
             />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="@string/new_project"
-            android:textStyle="bold"
+            android:textColor="@color/g_dark_blue"
             android:textSize="24sp"
-            android:layout_margin="10dp" />
+            android:textStyle="bold" />
     </LinearLayout>
 
     <EditText
@@ -37,7 +39,7 @@
     <EditText
         android:id="@+id/editTextProjectDescription"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="115dp"
         android:layout_marginTop="30dp"
         android:gravity="top|left"
         android:hint="@string/description"
@@ -62,10 +64,11 @@
             android:id="@+id/startDate_picker"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:paddingStart="14dp"
             android:text=""
+            app:backgroundTint="@color/g_dark_blue"
             app:icon="@drawable/baseline_calendar_today_24"
-            app:iconGravity="start"
-            android:paddingStart="14dp"/>
+            app:iconGravity="start" />
 
         <TextView
             android:layout_width="66dp"
@@ -80,16 +83,17 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/baseline_arrow_right_alt_24"
             android:paddingHorizontal="5dp"
-            />
+            android:textColor="@color/g_dark_blue" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/endDate_picker"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:paddingStart="14dp"
             android:text=""
+            app:backgroundTint="@color/g_dark_blue"
             app:icon="@drawable/baseline_calendar_today_24"
-            app:iconGravity="start"
-            android:paddingStart="14dp"/>
+            app:iconGravity="start" />
 
         <TextView
             android:layout_width="80dp"
@@ -101,13 +105,17 @@
 
     </LinearLayout>
 
-    <Button
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
         android:id="@+id/buttonCreateProject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/create"
+        android:background="@drawable/bottom_nav_background"
+        android:backgroundTint="@color/g_dark_blue"
         android:drawableRight="@drawable/baseline_arrow_24"
-        />
+        android:text="@string/create"
+        android:textColor="@color/g_card_background"
+        app:iconTint="@color/g_search_and_icons" />
 
 </LinearLayout>

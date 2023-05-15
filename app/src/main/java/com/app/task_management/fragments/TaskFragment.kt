@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.app.task_management.R
 
 
-class TaskFragment : Fragment() {
+class TaskFragment : Fragment(R.layout.fragment_task) {
 
 
     override fun onCreateView(

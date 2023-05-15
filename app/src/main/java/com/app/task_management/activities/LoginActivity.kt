@@ -61,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
                     }
                     is Resource.Success -> {
                         signingBtn.revertAnimation()
-                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                        val intent = Intent(this@LoginActivity, TaskActivity::class.java)
                         //clear in callstack, avoid back to login
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                         startActivity(intent)

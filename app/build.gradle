@@ -67,7 +67,7 @@ dependencies {
 
     implementation 'io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1'
     //Navigation component
-    def nav_version = "2.5.3"
+    def nav_version = "2.5.2"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     //loading button

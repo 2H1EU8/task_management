@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.app.task_management.R
 
-class TodoFragment : Fragment() {
+class TodoFragment : Fragment(R.layout.fragment_todo) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

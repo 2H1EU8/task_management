@@ -24,4 +24,6 @@
     <string name="date_planted">Date Planted</string>
     <string name="date_start">Date Start:</string>
     <string name="date_end">Date End:</string>
+    <string name="find_your_project">Find your project</string>
+    <string name="priority">Priority !</string>
 </resources>

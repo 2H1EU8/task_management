@@ -10,22 +10,29 @@
 package com.app.task_management.activities
 
 import android.app.DatePickerDialog
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import br.com.simplepass.loadingbutton.customViews.CircularProgressButton
 import com.app.task_management.R
+import com.app.task_management.data.Project
+import com.app.task_management.util.Resource
+import com.app.task_management.viewmodel.ProjectViewModel
 import com.google.android.material.button.MaterialButton
+import dagger.hilt.android.AndroidEntryPoint
+import java.text.SimpleDateFormat
 import java.util.*
 
+@AndroidEntryPoint
 class AddProjectActivity : AppCompatActivity() {
 
-//    private lateinit var databaseReference:
-
     private lateinit var backBtn: TextView
-    private lateinit var createBtn: Button
+    private lateinit var createBtn: CircularProgressButton
     private lateinit var startPicker: MaterialButton
     private lateinit var endPicker: MaterialButton
     private lateinit var startDate: TextView
@@ -36,6 +43,8 @@ class AddProjectActivity : AppCompatActivity() {
 
     private lateinit var projectName: EditText
     private lateinit var projectDescription: EditText
+
+    private val viewModel by viewModels<ProjectViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -120,8 +129,33 @@ class AddProjectActivity : AppCompatActivity() {
                 Toast.makeText(this,"End date must before start date, please change date planted", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
-
-
+            //add project
+            val project  = Project(
+                pName,
+                startDate.text.toString().trim(),
+                endDate.text.toString().trim(),
+                pDes
+            )
+            viewModel.addProject(project)
+            //update view
+            lifecycleScope.launchWhenStarted {
+                viewModel.task.collect{
+                    when(it) {
+                        is Resource.Loading -> {
+                            createBtn.startAnimation()
+                        }
+                        is Resource.Success -> {
+                            createBtn.revertAnimation()
+                            Toast.makeText(this@AddProjectActivity,"Add success!",Toast.LENGTH_LONG).show()
+                            startActivity(Intent(this@AddProjectActivity,TaskActivity::class.java))
+                        }
+                        is Resource.Error -> {
+                            createBtn.revertAnimation()
+                        }
+                        else -> Unit
+                    }
+                }
+            }
         }
     }
 }

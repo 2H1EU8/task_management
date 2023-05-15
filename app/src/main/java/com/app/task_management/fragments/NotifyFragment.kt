@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.app.task_management.R
 
-class NotifyFragment : Fragment() {
+class NotifyFragment : Fragment(R.layout.fragment_notify) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
