@@ -27,4 +27,9 @@ apply plugin: 'com.google.gms.google-services'
 ```
 
 ## Preview 
-Comming soon
+<img width="565" alt="pr2" src="https://github.com/2H1EU8/task_management/assets/94243225/f3ed23be-ff3f-4d78-8cd4-da9a023cc44d">
+<img width="565" alt="pr3" src="https://github.com/2H1EU8/task_management/assets/94243225/2d254dda-957d-4ef8-a06f-cd46617d3dc1">
+
+
+
+
